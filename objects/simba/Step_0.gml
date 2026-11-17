@@ -4,6 +4,9 @@ if (!variable_instance_exists(id, "dbg_room") || dbg_room != room) {
     show_debug_message("вошли в комнату: " + room_get_name(room) + ", block=" + string(global.pchelka_block));
 }
 
+// Пауза после выхода с экрана пчёл (в кадрах)
+if (global.pchelka_cooldown > 0) global.pchelka_cooldown--;
+
 // Снимаем блокировку, когда Симба отошёл от пчёлки
 if (global.pchelka_block && !place_meeting(x, y, pchelka2)) global.pchelka_block = false;
 
