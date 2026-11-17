@@ -1,3 +1,9 @@
+// ОТЛАДКА: печатаем один раз при входе Симбы в комнату
+if (!variable_instance_exists(id, "dbg_room") || dbg_room != room) {
+    dbg_room = room;
+    show_debug_message("вошли в комнату: " + room_get_name(room) + ", block=" + string(global.pchelka_block));
+}
+
 // Снимаем блокировку, когда Симба отошёл от пчёлки
 if (global.pchelka_block && !place_meeting(x, y, pchelka2)) global.pchelka_block = false;
 
