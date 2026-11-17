@@ -1,4 +1,3 @@
-room_goto(rancho)
-
-instance_destroy(pchelka)
-layer_create(pchelka2)
+// Пока Симба стоит на пчёлке, повторный запуск диалога блокируется
+global.pchelka_block = true;
+room_goto(rancho);

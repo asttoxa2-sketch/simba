@@ -1,8 +1,9 @@
-if (cveti<=9) {
-	room_goto(pchelkamonologeneprines)
-}	
+// Не срабатываем, пока Симба не отошёл от пчёлки после диалога
+if (global.pchelka_block) exit;
 
-	else
-	{
-	room_goto(pchelkamonologe4)
-	}
+if (cveti <= 9) {
+	room_goto(pchelkamonologeneprines);
+}
+else {
+	room_goto(pchelkamonologe4);
+}

@@ -1,3 +1,6 @@
+// Снимаем блокировку, когда Симба отошёл от пчёлки
+if (global.pchelka_block && !place_meeting(x, y, pchelka2)) global.pchelka_block = false;
+
 if (is_dead) {
     if (sprite_index != Sp_plakSimba) {
         sprite_index = Sp_plakSimba;
